@@ -1,12 +1,25 @@
 Pipeline {
 agent any
 
-statges{
-  stage("test" {
+stages{
+  stage("test") {
     step{
     echo "testing worked"
+    }
+  }
 
-  stage("build {
+  stage("build") {
     step{
       echo "build worked"
-  stage("compile in progres"
+      }
+    }
+  stage("compile") {
+    step{
+      echo "compilation in progres"
+  stage("package") {
+    step{
+      echo "packaging"
+    }
+  }
+    }
+  }

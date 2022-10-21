@@ -1,26 +1,20 @@
-Pipeline {
-agent any
-
-stages{
-  stage("test") {
-    step{
-    echo "testing worked"
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo "building" 
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo "testing"
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo "deploy"
+            }
+        }
     }
-  }
-
-  stage("build") {
-    step{
-      echo "build worked"
-      }
-    }
-  stage("compile") {
-    step{
-      echo "compilation in progres"
-  stage("package") {
-    step{
-      echo "packaging"
-    }
-  }
-    }
-  }
 }
